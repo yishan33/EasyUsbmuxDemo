@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FA237121-FA12-43EC-9CA1-026279AB1341"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDE7AD0D-484E-451E-AEC7-E1DAAAE6BE64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FakeUltroDemo/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FDE7AD0D-484E-451E-AEC7-E1DAAAE6BE64 - b6757dd8f9ac2db7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in FakeUltroDemo.ContentView.body.getter : some"
+                  moduleName = "FakeUltroDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liufushan/MyCode/FakeUltroDemo/FakeUltroDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "FDE7AD0D-484E-451E-AEC7-E1DAAAE6BE64 - b6757dd8f9ac2dda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in FakeUltroDemo.ContentView.body.getter : some"
+                  moduleName = "FakeUltroDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liufushan/MyCode/FakeUltroDemo/FakeUltroDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "FDE7AD0D-484E-451E-AEC7-E1DAAAE6BE64 - b6757dd8f9ac2dda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in FakeUltroDemo.ContentView.body.getter : some"
+                  moduleName = "FakeUltroDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liufushan/MyCode/FakeUltroDemo/FakeUltroDemo/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
