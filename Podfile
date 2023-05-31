@@ -5,7 +5,7 @@ target 'FakeUltroDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'CocoaHTTPServer', '~> 2.3'
+#  pod 'CocoaHTTPServer', '~> 2.3'
 
   # Pods for FakeUltroDemo
 
