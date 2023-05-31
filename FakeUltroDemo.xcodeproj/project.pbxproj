@@ -136,7 +136,6 @@
 				711E36632A1CA14D00DB305D /* ContentView.swift */,
 				711E36652A1CA14E00DB305D /* Assets.xcassets */,
 				711E366A2A1CA14E00DB305D /* FakeUltroDemo.entitlements */,
-				712843DC2A26F0AB009B04BF /* HTTP */,
 				715132D12A1DE4690069C784 /* usbmux */,
 				711E36672A1CA14E00DB305D /* Preview Content */,
 				711E36902A1CA88300DB305D /* FakeUltroDemo-Bridging-Header.h */,
@@ -169,13 +168,6 @@
 			path = FakeUltroDemoUITests;
 			sourceTree = "<group>";
 		};
-		712843DC2A26F0AB009B04BF /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HTTP;
-			sourceTree = "<group>";
-		};
 		715132D12A1DE4690069C784 /* usbmux */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +196,6 @@
 				09737F07C233B1F91189370A /* Pods-FakeUltroDemoTests.debug.xcconfig */,
 				C3B33C68F2B0D543B5462237 /* Pods-FakeUltroDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
