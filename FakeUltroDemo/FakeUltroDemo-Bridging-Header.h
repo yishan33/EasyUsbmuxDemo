@@ -3,3 +3,4 @@
 //
 
 #import "usbmux.h"
+#import "FUTCPRequestSerializer.h"

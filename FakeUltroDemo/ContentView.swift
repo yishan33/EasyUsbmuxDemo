@@ -11,17 +11,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Button {
-                let deviceInfo = FU.getDeviceInfo()
-                print(deviceInfo)
-                
-                let usbmux = usbmux()
-                usbmux.testDemo()
-                
-            } label: {
-                Text("点击获取设备信息")
+            List {
+                Button {
+    //                let deviceInfo = FU.getDeviceInfo()
+    //                print(deviceInfo)
+    //
+    //                let usbmux = usbmux()
+    //                usbmux.testDemo()
+                    
+                } label: {
+                    Text("点击获取设备信息")
+                }
+                Button {
+                    FUTCPRequestSerializer().request(withPath: "", params: ["":""])
+                } label: {
+                    Text("点击发送i love u")
+                }
             }
-
             
         }
         .padding()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5C276EC91CCC784C7DA8A8 /* Pods_FakeUltroDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBF985DDD2D187B3CE5E1CD /* Pods_FakeUltroDemo.framework */; };
+		21FDFEECDA93C7BE64FC3D3E /* Pods_FakeUltroDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE5A573396360968DD8601 /* Pods_FakeUltroDemoTests.framework */; };
 		711E36622A1CA14D00DB305D /* FakeUltroDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E36612A1CA14D00DB305D /* FakeUltroDemoApp.swift */; };
 		711E36642A1CA14D00DB305D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E36632A1CA14D00DB305D /* ContentView.swift */; };
 		711E36662A1CA14E00DB305D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711E36652A1CA14E00DB305D /* Assets.xcassets */; };
@@ -17,6 +19,10 @@
 		711E368D2A1CA22100DB305D /* FUMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711E368C2A1CA22100DB305D /* FUMessageManager.swift */; };
 		715132D42A1DE5070069C784 /* FUUsbMuxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 715132D32A1DE5070069C784 /* FUUsbMuxManager.m */; };
 		715132D72A1DE54D0069C784 /* usbmux.m in Sources */ = {isa = PBXBuildFile; fileRef = 715132D62A1DE54D0069C784 /* usbmux.m */; };
+		718B42BC2A24BEA4004E215C /* FUUsbMuxRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B42BB2A24BEA4004E215C /* FUUsbMuxRequest.m */; };
+		718B42BF2A24BEE6004E215C /* FUTCPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B42BE2A24BEE6004E215C /* FUTCPRequest.m */; };
+		718B42C22A24C33F004E215C /* FUTCPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B42C12A24C33F004E215C /* FUTCPRequestSerializer.m */; };
+		F018B5D2829DB06753DCFDB5 /* Pods_FakeUltroDemo_FakeUltroDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF9AAA4093C146A09AF72AF /* Pods_FakeUltroDemo_FakeUltroDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C7AA48A8AB78352FE972F9 /* Pods-FakeUltroDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemo.release.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemo/Pods-FakeUltroDemo.release.xcconfig"; sourceTree = "<group>"; };
+		09737F07C233B1F91189370A /* Pods-FakeUltroDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemoTests/Pods-FakeUltroDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1281FF159FAD998BF4E6DD8A /* Pods-FakeUltroDemo-FakeUltroDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemo-FakeUltroDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemo-FakeUltroDemoUITests/Pods-FakeUltroDemo-FakeUltroDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC2CB2302B5175537ADE2D9 /* Pods-FakeUltroDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemo.debug.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemo/Pods-FakeUltroDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		711E365E2A1CA14D00DB305D /* FakeUltroDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeUltroDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		711E36612A1CA14D00DB305D /* FakeUltroDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUltroDemoApp.swift; sourceTree = "<group>"; };
 		711E36632A1CA14D00DB305D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +64,18 @@
 		715132D32A1DE5070069C784 /* FUUsbMuxManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FUUsbMuxManager.m; sourceTree = "<group>"; };
 		715132D52A1DE54D0069C784 /* usbmux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = usbmux.h; sourceTree = "<group>"; };
 		715132D62A1DE54D0069C784 /* usbmux.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = usbmux.m; sourceTree = "<group>"; };
+		718B42B92A24BEA4004E215C /* FUUsbMuxRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUUsbMuxRequest.h; sourceTree = "<group>"; };
+		718B42BA2A24BEA4004E215C /* usbmux_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usbmux_define.h; sourceTree = "<group>"; };
+		718B42BB2A24BEA4004E215C /* FUUsbMuxRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUUsbMuxRequest.m; sourceTree = "<group>"; };
+		718B42BD2A24BEE6004E215C /* FUTCPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUTCPRequest.h; sourceTree = "<group>"; };
+		718B42BE2A24BEE6004E215C /* FUTCPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FUTCPRequest.m; sourceTree = "<group>"; };
+		718B42C02A24C33F004E215C /* FUTCPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FUTCPRequestSerializer.h; sourceTree = "<group>"; };
+		718B42C12A24C33F004E215C /* FUTCPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FUTCPRequestSerializer.m; sourceTree = "<group>"; };
+		9149042F0B1D5F4DE9E181C0 /* Pods-FakeUltroDemo-FakeUltroDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemo-FakeUltroDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemo-FakeUltroDemoUITests/Pods-FakeUltroDemo-FakeUltroDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99BE5A573396360968DD8601 /* Pods_FakeUltroDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUltroDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B33C68F2B0D543B5462237 /* Pods-FakeUltroDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeUltroDemoTests.release.xcconfig"; path = "Target Support Files/Pods-FakeUltroDemoTests/Pods-FakeUltroDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CAF9AAA4093C146A09AF72AF /* Pods_FakeUltroDemo_FakeUltroDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUltroDemo_FakeUltroDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBF985DDD2D187B3CE5E1CD /* Pods_FakeUltroDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeUltroDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5C276EC91CCC784C7DA8A8 /* Pods_FakeUltroDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FDFEECDA93C7BE64FC3D3E /* Pods_FakeUltroDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F018B5D2829DB06753DCFDB5 /* Pods_FakeUltroDemo_FakeUltroDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +113,8 @@
 				711E36722A1CA14E00DB305D /* FakeUltroDemoTests */,
 				711E367C2A1CA14E00DB305D /* FakeUltroDemoUITests */,
 				711E365F2A1CA14D00DB305D /* Products */,
+				7EE4628AACD2E2DDB907C89C /* Pods */,
+				BA4D66D74EA64F5C0A6F283E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +136,7 @@
 				711E36632A1CA14D00DB305D /* ContentView.swift */,
 				711E36652A1CA14E00DB305D /* Assets.xcassets */,
 				711E366A2A1CA14E00DB305D /* FakeUltroDemo.entitlements */,
+				712843DC2A26F0AB009B04BF /* HTTP */,
 				715132D12A1DE4690069C784 /* usbmux */,
 				711E36672A1CA14E00DB305D /* Preview Content */,
 				711E36902A1CA88300DB305D /* FakeUltroDemo-Bridging-Header.h */,
@@ -141,15 +169,53 @@
 			path = FakeUltroDemoUITests;
 			sourceTree = "<group>";
 		};
+		712843DC2A26F0AB009B04BF /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
 		715132D12A1DE4690069C784 /* usbmux */ = {
 			isa = PBXGroup;
 			children = (
+				718B42B92A24BEA4004E215C /* FUUsbMuxRequest.h */,
+				718B42BB2A24BEA4004E215C /* FUUsbMuxRequest.m */,
+				718B42BD2A24BEE6004E215C /* FUTCPRequest.h */,
+				718B42BE2A24BEE6004E215C /* FUTCPRequest.m */,
+				718B42C02A24C33F004E215C /* FUTCPRequestSerializer.h */,
+				718B42C12A24C33F004E215C /* FUTCPRequestSerializer.m */,
+				718B42BA2A24BEA4004E215C /* usbmux_define.h */,
 				715132D52A1DE54D0069C784 /* usbmux.h */,
 				715132D62A1DE54D0069C784 /* usbmux.m */,
 				715132D22A1DE5070069C784 /* FUUsbMuxManager.h */,
 				715132D32A1DE5070069C784 /* FUUsbMuxManager.m */,
 			);
 			path = usbmux;
+			sourceTree = "<group>";
+		};
+		7EE4628AACD2E2DDB907C89C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AC2CB2302B5175537ADE2D9 /* Pods-FakeUltroDemo.debug.xcconfig */,
+				07C7AA48A8AB78352FE972F9 /* Pods-FakeUltroDemo.release.xcconfig */,
+				1281FF159FAD998BF4E6DD8A /* Pods-FakeUltroDemo-FakeUltroDemoUITests.debug.xcconfig */,
+				9149042F0B1D5F4DE9E181C0 /* Pods-FakeUltroDemo-FakeUltroDemoUITests.release.xcconfig */,
+				09737F07C233B1F91189370A /* Pods-FakeUltroDemoTests.debug.xcconfig */,
+				C3B33C68F2B0D543B5462237 /* Pods-FakeUltroDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA4D66D74EA64F5C0A6F283E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBBF985DDD2D187B3CE5E1CD /* Pods_FakeUltroDemo.framework */,
+				CAF9AAA4093C146A09AF72AF /* Pods_FakeUltroDemo_FakeUltroDemoUITests.framework */,
+				99BE5A573396360968DD8601 /* Pods_FakeUltroDemoTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 711E36832A1CA14E00DB305D /* Build configuration list for PBXNativeTarget "FakeUltroDemo" */;
 			buildPhases = (
+				23C97C863712DD9C9E4BE371 /* [CP] Check Pods Manifest.lock */,
 				711E365A2A1CA14D00DB305D /* Sources */,
 				711E365B2A1CA14D00DB305D /* Frameworks */,
 				711E365C2A1CA14D00DB305D /* Resources */,
+				B7895563261F8BEF2D25D81A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 711E36862A1CA14E00DB305D /* Build configuration list for PBXNativeTarget "FakeUltroDemoTests" */;
 			buildPhases = (
+				F32E8D45494C2CE61FA817F6 /* [CP] Check Pods Manifest.lock */,
 				711E366B2A1CA14E00DB305D /* Sources */,
 				711E366C2A1CA14E00DB305D /* Frameworks */,
 				711E366D2A1CA14E00DB305D /* Resources */,
@@ -194,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 711E36892A1CA14E00DB305D /* Build configuration list for PBXNativeTarget "FakeUltroDemoUITests" */;
 			buildPhases = (
+				B1CD64FB4BB81486E69077BE /* [CP] Check Pods Manifest.lock */,
 				711E36752A1CA14E00DB305D /* Sources */,
 				711E36762A1CA14E00DB305D /* Frameworks */,
 				711E36772A1CA14E00DB305D /* Resources */,
+				8E3944CB4B3F4B1107ADCF1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,15 +349,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23C97C863712DD9C9E4BE371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FakeUltroDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E3944CB4B3F4B1107ADCF1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo-FakeUltroDemoUITests/Pods-FakeUltroDemo-FakeUltroDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo-FakeUltroDemoUITests/Pods-FakeUltroDemo-FakeUltroDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo-FakeUltroDemoUITests/Pods-FakeUltroDemo-FakeUltroDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1CD64FB4BB81486E69077BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FakeUltroDemo-FakeUltroDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7895563261F8BEF2D25D81A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo/Pods-FakeUltroDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo/Pods-FakeUltroDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FakeUltroDemo/Pods-FakeUltroDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32E8D45494C2CE61FA817F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FakeUltroDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		711E365A2A1CA14D00DB305D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				711E36642A1CA14D00DB305D /* ContentView.swift in Sources */,
+				718B42C22A24C33F004E215C /* FUTCPRequestSerializer.m in Sources */,
 				711E36622A1CA14D00DB305D /* FakeUltroDemoApp.swift in Sources */,
 				715132D72A1DE54D0069C784 /* usbmux.m in Sources */,
+				718B42BF2A24BEE6004E215C /* FUTCPRequest.m in Sources */,
 				715132D42A1DE5070069C784 /* FUUsbMuxManager.m in Sources */,
+				718B42BC2A24BEA4004E215C /* FUUsbMuxRequest.m in Sources */,
 				711E368D2A1CA22100DB305D /* FUMessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +616,7 @@
 		};
 		711E36842A1CA14E00DB305D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC2CB2302B5175537ADE2D9 /* Pods-FakeUltroDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +645,7 @@
 		};
 		711E36852A1CA14E00DB305D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C7AA48A8AB78352FE972F9 /* Pods-FakeUltroDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +673,7 @@
 		};
 		711E36872A1CA14E00DB305D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09737F07C233B1F91189370A /* Pods-FakeUltroDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +692,7 @@
 		};
 		711E36882A1CA14E00DB305D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3B33C68F2B0D543B5462237 /* Pods-FakeUltroDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +711,7 @@
 		};
 		711E368A2A1CA14E00DB305D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1281FF159FAD998BF4E6DD8A /* Pods-FakeUltroDemo-FakeUltroDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +728,7 @@
 		};
 		711E368B2A1CA14E00DB305D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9149042F0B1D5F4DE9E181C0 /* Pods-FakeUltroDemo-FakeUltroDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

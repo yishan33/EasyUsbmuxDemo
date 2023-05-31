@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dispatch/dispatch.h>
+#import "FUUsbMuxRequest.h"
 
 typedef void (^err_handler)(int);
 
@@ -24,6 +25,9 @@ static int address = INADDR_LOOPBACK;
 static dispatch_queue_t usbmuxd_io_queue;
 static dispatch_io_t listen_channel;
 static dispatch_io_t connect_channel;
+
+typedef void (^fail_handler)(NSError *error);
+typedef void (^success_handler)(NSDictionary *msgDict, usbmux_packet_t *packet);
 
 @interface usbmux ()
 
@@ -91,7 +95,19 @@ static dispatch_io_t connect_channel;
     });
 }
 
-+ (void)send_listen_packet {
+//+ (void)send_listen_packet {
+//    listen_channel = [self connect_to_usbmuxd_channel];
+//
+//    NSDictionary *packet = @{
+//                             @"ClientVersionString": @"1",
+//                             @"MessageType": @"Listen",
+//                             @"ProgName": @"Peertalk Example"
+//                             };
+//    NSLog(@"send listen packet: %@", packet);
+//    [self send_packet:packet tag:0 channel:listen_channel];
+//}
+
++ (void)sendListenPacket {
     listen_channel = [self connect_to_usbmuxd_channel];
     
     NSDictionary *packet = @{
@@ -100,8 +116,94 @@ static dispatch_io_t connect_channel;
                              @"ProgName": @"Peertalk Example"
                              };
     NSLog(@"send listen packet: %@", packet);
-    [self send_packet:packet tag:0 channel:listen_channel];
+//    [self send_packet:packet tag:0 channel:listen_channel];
+    FUUsbMuxRequest *request = [[FUUsbMuxRequest alloc] initWithTag:0 packet:packet channel:listen_channel];
+    [self request:request success:^(NSDictionary *msgDict, usbmux_packet_t *packet) {
+        if (msgDict[@"DeviceID"]) {
+            deviceID = msgDict[@"DeviceID"];
+            [self send_connect_usb_packet];
+        }
+    } fail:^(NSError *error) {
+        NSLog(@"sendListenPacket error:%@", error);
+    }];
 }
+
++ (void)request:(FUUsbMuxRequest *)request
+        success:(success_handler)success
+           fail:(fail_handler)fail
+{
+    usbmux_packet_t ref_upacket;
+    dispatch_io_read(request.channel, 0, sizeof(ref_upacket.size), usbmuxd_io_queue, ^(bool done, dispatch_data_t  _Nullable data, int error) {
+        NSLog(@"dispatch_io_read 0, %lu: done=%d data=%p error=%d", sizeof(ref_upacket.size), done, data, error);
+        
+        if (!done) { return; }
+        
+        // Read size of incoming usbmux_packet_t
+        uint32_t upacket_len = 0;
+        char *buffer = NULL;
+        size_t buffer_size = 0;
+        // data 是读取到的数据，这一步获取到读取到的data的长度，并将buffer指向对应的缓冲区
+        dispatch_data_t map_data = dispatch_data_create_map(data, (const void **)&buffer, &buffer_size);
+        assert(buffer_size == sizeof(ref_upacket.size));
+        assert(sizeof(upacket_len) == sizeof(ref_upacket.size));
+        memcpy((void *)&(upacket_len), (const void *)buffer, buffer_size);
+        
+        // Allocate a new usbmux_packet_t for the expected size
+        uint32_t payloadLength = upacket_len - (uint32_t)sizeof(usbmux_packet_t);
+        usbmux_packet_t *upacket = usbmux_packet_alloc(payloadLength);
+        
+        // Read rest of the incoming usbmux_packet_t
+        off_t offset = sizeof(ref_upacket.size);
+        dispatch_io_read(request.channel, offset, upacket->size - offset, usbmuxd_io_queue, ^(bool done, dispatch_data_t data, int error) {
+            NSLog(@"dispatch_io_read %lld,%lld: done=%d data=%p error=%d", offset, upacket->size - offset, done, data, error);
+            
+            if (!done) { return; }
+            
+            // Copy read bytes onto our usbmux_packet_t
+            char *buffer = NULL;
+            size_t buffer_size = 0;
+            dispatch_data_t map_data = dispatch_data_create_map(data, (const void **)&buffer, &buffer_size);
+            assert(buffer_size == upacket->size - offset);
+            memcpy(((void *)(upacket))+offset, (const void *)buffer, buffer_size);
+            NSLog(@"package protocol is: %u, type is: %u", upacket->protocol, upacket->type);
+            
+            // Try to decode any payload as plist
+            NSError *err = nil;
+            NSDictionary *dict = nil;
+            if (usbmux_packet_payload_size(upacket)) {
+                dict = [NSPropertyListSerialization propertyListWithData:[NSData dataWithBytesNoCopy:usbmux_packet_payload(upacket) length:usbmux_packet_payload_size(upacket) freeWhenDone:NO] options:NSPropertyListImmutable format:NULL error:&err];
+            }
+            NSLog(@"packaget tag is: %u, payload is: %@", upacket->tag, dict);
+            
+            if (err) {
+                fail(err);
+            } else {
+                success(dict, upacket);
+            }
+            
+//            if (dict[@"DeviceID"]) {
+//                deviceID = dict[@"DeviceID"];
+//                [self send_connect_usb_packet];
+//            }
+//
+//            if ([dict[@"Number"] integerValue] == 0 && upacket->tag == 1) {
+//                NSLog(@"connected.");
+//                [self communicate_to_idevice];
+//                usbmux_packet_free(upacket);
+//                return;
+//            }
+            
+            // Invoke callback
+//            callback(err, dict, upacket->tag);
+            
+            // Read next
+//            [self read_packet_on_channle:listen_channel];
+            usbmux_packet_free(upacket);
+        });
+        
+    });
+}
+
 
 + (void)read_packet_on_channle:(dispatch_io_t)channel {
     // Read
@@ -165,21 +267,44 @@ static dispatch_io_t connect_channel;
 //            callback(err, dict, upacket->tag);
             
             // Read next
-            [self read_packet_on_channle:listen_channel];
+            [self read_packet_on_channle:listen_channel ];
             
             usbmux_packet_free(upacket);
         });
         
     });
-    
 }
 
 + (void)listen_usb {
     // 向usbmuxd发送一个Listen的报文，表明要监听iDevice的插拔事件
-    [self send_listen_packet];
+    [self sendListenPacket];
     [self read_packet_on_channle:listen_channel];
-    
+
     NSLog(@"end call listen_usb");
+}
+
++ (void)sendConnectUsbPacket {
+    NSLog(@"sendConnectUsbPacket ---");
+    connect_channel = [self connect_to_usbmuxd_channel];
+    
+    port = ((port<<8) & 0xFF00) | (port>>8);
+    NSDictionary *packet = @{
+                             @"ClientVersionString" : @"1",
+                             @"DeviceID" : deviceID,
+                             @"MessageType" : @"Connect",
+                             @"PortNumber" : [NSNumber numberWithInt:port],
+                             @"ProgName" : @"Peertalk Example"
+                             };
+    
+    NSLog(@"send connect to usb packet: %@", packet);
+    [self send_packet:packet tag:1 channel:connect_channel];
+    FUUsbMuxRequest *request = [[FUUsbMuxRequest alloc] initWithTag:1 packet:packet channel:connect_channel];
+    [self request:request success:^(NSDictionary *msgDict, usbmux_packet_t *packet) {
+        
+    } fail:^(NSError *error) {
+        NSLog(@"sendConnectUsbPacket error:%@", error);
+    }];
+    [self read_packet_on_channle:connect_channel];
 }
 
 + (void)send_connect_usb_packet {
